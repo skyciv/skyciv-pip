@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: skyciv
+Version: 0.0.1
+Summary: A simplified way to use the SkyCiv API.
+Home-page: UNKNOWN
+License: UNKNOWN
+Description: # What is this?
+        
+        A fast way to interact with the SkyCiv API using Python 3.
+        
+        ## Usage
+        
+        `pip3 install skyciv`
+        
+        then...
+        
+        ```
+        >>> import skyciv
+        
+        >>> data = {...} // [See API documentation](https://skyciv.com/api/v3)
+        
+        >>> options = {
+            version: 3,
+            http_or_https: 'https'
+        }
+        
+        >>> results = skyciv.request(data, options)
+        ```
+        
+        ## Data
+        
+        The data parameter is required and take the JSON object that describes your model and the functions you would like to run. [See API documentation](https://skyciv.com/api/v3)
+        
+        ## Options
+        
+        The options parameter is optional and takes and object containing two keys:
+        
+        * *version* - _1 | 2 | 3_ (Defaults to 3)
+        * *http_or_https* - _http | https_ (Defaults to https)
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.0
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+Provides-Extra: dev
