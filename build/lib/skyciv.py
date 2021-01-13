@@ -2,7 +2,7 @@ import json
 import http.client as httplib
 
 
-def request(api_object: Dict, options: Dict):
+def request(api_object: dict, options: dict):
     """Makes a request to the SkyCiv API using the provided API object and options.
 
     Args:
@@ -54,8 +54,7 @@ def request(api_object: Dict, options: Dict):
     parsed_res = json.loads(res_data)
 
     if (parsed_res["response"]["status"] != 0):
-    print(
-    f'Unsuccessful solve with message: {parsed_res["response"]["msg"]}')
+        print(
+            f'Unsuccessful solve with message: {parsed_res["response"]["msg"]}')
 
     return parsed_res
-

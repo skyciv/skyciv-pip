@@ -4,7 +4,7 @@ A fast way to interact with the SkyCiv API.
 
 ## Usage
 
-`pip3 install skyciv`
+`>>> pip3 install skyciv`
 
 then...
 
@@ -23,8 +23,8 @@ import skyciv
 
 ## Methods
 
-### `skyciv.request(apiObject, callback?, options?)`
-Make a request to the SkyCiv API. The callback function receives the parsed response.
+### `skyciv.request(apiObject, options?)`
+Make a request to the SkyCiv API.
 
 ```py
 skyciv_response = skyciv.request(api_object, options)
