@@ -6,20 +6,15 @@ with open("README.md", "r") as f:
 
 setup(
     name='skyciv',
-    version='0.0.1',
-    description='A simplified way to use the SkyCiv API.',
+    version='1.0.1',
+    description='A simplified way to use the SkyCiv API with Python.',
     py_modules=["skyciv"],
     package_dir={'': 'src'},
     long_description=long_description,
     long_description_content_type="text/markdown",
+    keywords='skyciv structural analysis design API AISC Eurocode CSA steel concrete BIM',
     classifiers=[
-        "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.0",
-        "Programming Language :: Python :: 3.1",
-        "Programming Language :: Python :: 3.10",
-        "Programming Language :: Python :: 3.2",
-        "Programming Language :: Python :: 3.3",
-        "Programming Language :: Python :: 3.4",
+        'License :: OSI Approved :: MIT License',
         "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
@@ -31,7 +26,7 @@ setup(
             "pytest>=3.7",
         ]
     },
-    url="",
+    url="https://github.com/skyciv/skyciv-pip",
     author="Steve Richardson",
     author_email="steve.richardson@skyciv.com",
 )

@@ -3,11 +3,11 @@ import skyciv
 # THIS HAS NOT BEEN IMPLEMENTED YET.
 
 data = {
-    auth: {
-        "username": "steve.richardson@skyciv.com",
-        "key": "API_KEY"
+    "auth": {
+        "username": "YOUR_SKYCIV_ACCOUNT",
+        "key": "YOUR_SKYCIV_API_KEY"
     },
-    functions: [
+    "functions": [
         {
             'function': 'S3D.session.start',
             'arguments': {}
