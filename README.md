@@ -38,5 +38,6 @@ Visit the [API docs](https://skyciv.com/api/v3/docs/getting-started) for instruc
 
 | Version  | Breaking          | Description     |
 | :---     | :---              | :---            |
+| 1.0.2    | false             | • Updated readme |
 | 1.0.1    | false             | • Changed `skyciv.request()` to print msg if SkyCiv returns error rather than throw an exception |
 | 1.0.0    | -                 | Initial release |
