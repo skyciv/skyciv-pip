@@ -16,14 +16,14 @@ import skyciv
 
 ## Options
 
-**The options object is optional and** takes:
+**The options object is optional** and takes:
 
 * *version* - _2 | 3_ (Defaults to 3)
 * *http_or_https* - _http | https_ (Defaults to https)
 
 ## Methods
 
-### `skyciv.request(apiObject, options?)`
+### `skyciv.request(api_object, options?)`
 Make a request to the SkyCiv API.
 
 ```py
@@ -38,6 +38,8 @@ Visit the [API docs](https://skyciv.com/api/v3/docs/getting-started) for instruc
 
 | Version  | Breaking          | Description     |
 | :---     | :---              | :---            |
+| 1.0.4    | false             | • Package will now only use dumps on input if api_object is not a string. |
+| 1.0.3    | false             | • Fixed options dictionary to be optional |
 | 1.0.2    | false             | • Updated readme |
 | 1.0.1    | false             | • Changed `skyciv.request()` to print msg if SkyCiv returns error rather than throw an exception |
 | 1.0.0    | -                 | Initial release |

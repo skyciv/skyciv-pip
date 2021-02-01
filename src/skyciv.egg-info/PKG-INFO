@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: skyciv
-Version: 1.0.1
+Version: 1.0.4
 Summary: A simplified way to use the SkyCiv API with Python.
 Home-page: https://github.com/skyciv/skyciv-pip
 Author: Steve Richardson
@@ -24,7 +24,7 @@ Description: # What is this?
         
         ## Options
         
-        **The options object is optional and** takes:
+        **The options object is optional** and takes:
         
         * *version* - _2 | 3_ (Defaults to 3)
         * *http_or_https* - _http | https_ (Defaults to https)
@@ -46,6 +46,9 @@ Description: # What is this?
         
         | Version  | Breaking          | Description     |
         | :---     | :---              | :---            |
+        | 1.0.4    | false             | • Package will now only use dumps on input if api_object is not a string. |
+        | 1.0.3    | false             | • Fixed options dictionary to be optional |
+        | 1.0.2    | false             | • Updated readme |
         | 1.0.1    | false             | • Changed `skyciv.request()` to print msg if SkyCiv returns error rather than throw an exception |
         | 1.0.0    | -                 | Initial release |
 Keywords: skyciv structural analysis design API AISC Eurocode CSA steel concrete BIM

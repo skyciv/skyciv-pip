@@ -2,7 +2,7 @@ import json
 import http.client as httplib
 
 
-def request(api_object: dict, options: dict):
+def request(api_object: dict, options={}):
     """Makes a request to the SkyCiv API using the provided API object and options.
 
     Args:
@@ -43,7 +43,10 @@ def request(api_object: dict, options: dict):
     headers = {"Content-Type": "application/json"}
     conn = httplib.HTTPSConnection("api.skyciv.com", port)
 
-    stringified_data = json.dumps(api_object, separators=(",", ":"))
+    # Check if api_object has already been stringified, stringify it if not.
+    stringified_data = api_object
+    if not isinstance(stringified_data, str):
+        stringified_data = json.dumps(api_object, separators=(",", ":"))
 
     conn.request("POST", "/v" + str(version), stringified_data, headers)
 
