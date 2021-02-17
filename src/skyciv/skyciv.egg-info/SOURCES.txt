@@ -1,0 +1,7 @@
+README.md
+setup.py
+src/skyciv/skyciv.egg-info/PKG-INFO
+src/skyciv/skyciv.egg-info/SOURCES.txt
+src/skyciv/skyciv.egg-info/dependency_links.txt
+src/skyciv/skyciv.egg-info/requires.txt
+src/skyciv/skyciv.egg-info/top_level.txt

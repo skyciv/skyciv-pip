@@ -1,15 +1,15 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 long_description = ''
-with open("README.md", "r") as f:
+with open("./README.md", "r") as f:
     long_description = f.read()
 
 setup(
     name='skyciv',
-    version='1.0.4',
+    version='1.1.0',
     description='A simplified way to use the SkyCiv API with Python.',
     py_modules=["skyciv"],
-    package_dir={'': 'src'},
+    package_dir={'': 'src/skyciv'},
     long_description=long_description,
     long_description_content_type="text/markdown",
     keywords='skyciv structural analysis design API AISC Eurocode CSA steel concrete BIM',
