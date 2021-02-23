@@ -4,9 +4,9 @@ from typing import Literal
 class Member:
     def __init__(
         self,
-        node_A: int,
-        node_B: int,
-        section_id: int,
+        node_A: int = None,
+        node_B: int = None,
+        section_id: int = None,
         fixity_A: str = 'FFFFFF',
         fixity_B: str = 'FFFFFF',
         type: Literal["normal", "normal_continuous",

@@ -4,14 +4,14 @@ from typing import Literal
 class Material:
     def __init__(
         self,
-        name: str,
-        density: float,
-        elasticity_modulus: float,
-        poissons_ratio: float,
-        yield_strength: float,
-        ultimate_strength: float,
+        name: str = None,
+        density: float = None,
+        elasticity_modulus: float = None,
+        poissons_ratio: float = None,
+        yield_strength: float = None,
+        ultimate_strength: float = None,
         _class: Literal["steel", "aluminium",
-                        "masonry", "concrete", "wood", "other"]
+                        "masonry", "concrete", "wood", "other"] = None
     ) -> None:
         """Creates an instance of the SkyCiv Material class.
 

@@ -25,9 +25,9 @@ class Moments(ModelCollectionComponent):
             node (int, optional): The node ID which the moment is located. If type is "m", provide value None. Defaults to None.
             member (int, optional): The member ID which the moment is located. If type is "n", provide value None. Defaults to None.
             position (float, optional): The percentage from node_A to node_B of the member which the moment is located. E.g. 10 for 10 %. If type is "n", provide value None. Defaults to None.
-            x_mag (float, optional): The magnitude of the moment about the x axis. Positive = counter-clockwise, negative = clockwise. Defaults to 0.
-            y_mag (float, optional): The magnitude of the moment about the y axis. Positive = counter-clockwise, negative = clockwise. Defaults to 0.
-            z_mag (float, optional): The magnitude of the moment about the z axis. Positive = counter-clockwise, negative = clockwise. Defaults to 0.
+            x_mag (float, optional): The magnitude of the moment about the x-axis. Positive = counter-clockwise, negative = clockwise. Defaults to 0.
+            y_mag (float, optional): The magnitude of the moment about the y-axis. Positive = counter-clockwise, negative = clockwise. Defaults to 0.
+            z_mag (float, optional): The magnitude of the moment about the z-axis. Positive = counter-clockwise, negative = clockwise. Defaults to 0.
             load_group (str, optional): The load group to which the moment will be grouped. Defaults to None.
 
         Returns:
@@ -42,7 +42,7 @@ class Moments(ModelCollectionComponent):
         return next_index
 
     def id_from_element_id(self, type: Literal["n", "m"], element_id: int) -> int:
-        """Find a moments's ID from the node ID which it is located.
+        """Find a moment's ID from the node ID which it is located.
 
         Args:
             type (str): The type of object to which the load is applied. node, member. {"n" | "m"}.

@@ -6,7 +6,7 @@ with open("./README.md", "r") as f:
 
 setup(
     name='skyciv',
-    version='1.1.0',
+    version='1.1.3',
     description='A simplified way to use the SkyCiv API with Python.',
     py_modules=["skyciv"],
     package_dir={'': 'src/skyciv'},

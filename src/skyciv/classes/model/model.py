@@ -11,7 +11,7 @@ from classes.model.components.plates.plates import Plates
 from classes.model.components.point_loads.point_loads import PointLoads
 from classes.model.components.pressures.pressures import Pressures
 from classes.model.components.sections.sections import Sections
-from classes.model.components.self_weight.self_weight import SelfWeight
+from classes.model.components.self_weights.self_weights import SelfWeights
 from classes.model.components.settings.settings import Settings
 from classes.model.components.settlements.settlements import Settlements
 from classes.model.components.supports.supports import Supports
@@ -57,7 +57,7 @@ class Model:
         self.pressures = Pressures()
         self.area_loads = AreaLoads()
         self.member_prestress_loads = {}
-        self.self_weight = SelfWeight()
+        self.self_weight = SelfWeights()
         self.load_combinations = LoadCombinations()
         self.load_cases = {}
         self.nodal_masses = {}
@@ -96,3 +96,6 @@ class Model:
         for k, v in model_object.items():
             if hasattr(self, k):
                 setattr(self, str(k), v)
+
+    def __getitem__(self, item):
+        return getattr(self, item)

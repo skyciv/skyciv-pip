@@ -3,7 +3,7 @@ from classes.model.components._base_class.model_collection_component import Mode
 
 class LoadCombination(ModelCollectionComponent):
 
-    def __init__(self, name: str, combination_factors: dict) -> None:
+    def __init__(self, name: str = None, combination_factors: dict = None) -> None:
         """Creates an instance of the SkyCiv LoadCombination class.
 
         Args:
@@ -35,12 +35,12 @@ class LoadCombination(ModelCollectionComponent):
             lc.clear_all() # To remove any existing factors.
             lc.set("LC1", factors)
         """
-
         self.name = name
 
-        for k, v in combination_factors.items():
-            if k == "name":
-                raise Exception(
-                    "A load combination can not have the name 'name' as this is a reserved keyword.")
-            else:
-                setattr(self, str(k), v)
+        if not combination_factors == None:
+            for k, v in combination_factors.items():
+                if k == "name":
+                    raise Exception(
+                        "A load combination can not have the name 'name' as this is a reserved keyword.")
+                else:
+                    setattr(self, str(k), v)

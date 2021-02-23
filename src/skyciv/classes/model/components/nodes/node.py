@@ -1,6 +1,6 @@
 class Node:
 
-    def __init__(self, x: float, y: float, z: float) -> None:
+    def __init__(self, x: float = None, y: float = None, z: float = None) -> None:
         """Creates an instance of the SkyCiv Node class.
 
         Args:

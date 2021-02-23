@@ -20,12 +20,12 @@ class Settlements(ModelCollectionComponent):
 
         Args:
             node (int): The ID of the node at which the settlement is applied.
-            tx (float, optional): Settlement displacement in the global x axis. Defaults to None.
-            ty (float, optional): Settlement displacement in the global y axis. Defaults to None.
-            tz (float, optional): Settlement displacement in the global z axis. Defaults to None.
-            rx (float, optional): Settlement rotation about the global x axis. Defaults to None.
-            ry (float, optional): Settlement rotation about the global y axis. Defaults to None.
-            rz (float, optional): Settlement rotation about the global z axis. Defaults to None.
+            tx (float, optional): Settlement displacement in the global x-axis. Defaults to None.
+            ty (float, optional): Settlement displacement in the global y-axis. Defaults to None.
+            tz (float, optional): Settlement displacement in the global z-axis. Defaults to None.
+            rx (float, optional): Settlement rotation about the global x-axis. Defaults to None.
+            ry (float, optional): Settlement rotation about the global y-axis. Defaults to None.
+            rz (float, optional): Settlement rotation about the global z-axis. Defaults to None.
 
         Returns:
             int: The ID of the created settlement.
@@ -37,7 +37,7 @@ class Settlements(ModelCollectionComponent):
         return next_index
 
     def id_from_node_id(self, node_id: int) -> int:
-        """Find an settlements's ID from the node ID which it is located.
+        """Find a settlement's ID from the node ID which it is located.
 
         Args:
             node_id (int): The node ID of the settlement to find.

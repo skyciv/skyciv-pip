@@ -51,3 +51,6 @@ class Settings:
         settings = clone(vars(self))
         settings["units"] = settings["units"].get()
         return settings
+
+    def __getitem__(self, item):
+        return getattr(self, item)

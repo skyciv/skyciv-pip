@@ -24,7 +24,12 @@ class ApiObject:
             http_or_https (str, optional): Whether to use http or https. {"http" | "https"}. Defaults to 'https'.
             version (int, optional): API version. {2 | 3}. Defaults to 3.
         """
-        return request(self.to_json(), {http_or_https, version})
+        res = request(self.to_json(), {http_or_https, version})
+        if "response" in res:
+            if "last_session_id" in res["response"]:
+                self.auth.session_id = res["response"]["last_session_id"]
+
+        return res
 
     def get(self) -> dict:
         """Converts the ApiObject into a Python dictionary that will parse to JSON in the SkyCiv format.

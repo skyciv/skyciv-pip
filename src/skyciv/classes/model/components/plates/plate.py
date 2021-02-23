@@ -4,9 +4,9 @@ from typing import Literal
 class Plate:
     def __init__(
         self,
-        nodes: list[int],
-        thickness: float,
-        material_id: int,
+        nodes: list[int] = None,
+        thickness: float = None,
+        material_id: int = None,
         rotZ: float = 0,
         type: str = 'mindlin',
         offset: float = 0,
@@ -19,7 +19,7 @@ class Plate:
             nodes (list[int]): An array of node IDs that define the plate. At least 3 IDs are required.
             thickness (float): Plate thickness.
             material_id (int): The ID of the material to use for the plate.
-            rotZ (float, optional): Rotation about the Z axis. Defaults to 0.
+            rotZ (float, optional): Rotation about the z-axis. Defaults to 0.
             type (str, optional): Mindlin plates take into account shear deformations based on the Mindlin-Reissner Theory. Defaults to 'mindlin'.
             offset (float, optional): Offset of the plate along its local z-axis. Defaults to 0.
             state (str, optional): Denotes whether the plate is in a state of plane stress or plane strain. Defaults to 'stress'. {"stress" | "strain"}.

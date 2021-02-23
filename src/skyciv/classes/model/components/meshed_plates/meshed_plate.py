@@ -1,9 +1,9 @@
 class MeshedPlate:
     def __init__(self,
-                 parent_plate: int,
-                 node_A: int,
-                 node_B: int,
-                 node_C: int,
+                 parent_plate: int = None,
+                 node_A: int = None,
+                 node_B: int = None,
+                 node_C: int = None,
                  node_D: int = None,
                  rotZ: float = 0
                  ) -> None:
@@ -15,7 +15,7 @@ class MeshedPlate:
             node_B (int): The second node of the meshed plate.
             node_C (int): The third node of the meshed plate.
             node_D (int, optional): The fourth node of the meshed plate. Set this to None if the meshed plate is triangular. Defaults to None.
-            rotZ (float, optional): Rotation of this plate about the plate's local Z axis, in degrees. Defaults to 0.
+            rotZ (float, optional): Rotation of this plate about the plate's local z-axis, in degrees. Defaults to 0.
         """
         self.parent_plate = parent_plate
         self.node_A = node_A

@@ -64,3 +64,6 @@ class ModelCollectionComponent:
         """
         for key in self.__dict__.keys():
             del self[key]
+
+    def __getitem__(self, item):
+        return getattr(self, item)

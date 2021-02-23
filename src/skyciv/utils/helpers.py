@@ -63,3 +63,18 @@ def keyvals(obj: dict) -> list[list]:
         return obj.items()
     else:
         return vars(obj).items()
+
+
+def keys(obj: dict) -> list[list]:
+    """Return the keys of a class or dictionary.
+    Args:
+        obj (dict): A class or dictionary.
+
+    Returns:
+        list[list]: An array of keys
+    """
+
+    if type(obj) is dict:
+        return obj.keys()
+    else:
+        return vars(obj).keys()

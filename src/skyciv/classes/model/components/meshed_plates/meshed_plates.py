@@ -16,7 +16,7 @@ class MeshedPlates(ModelCollectionComponent):
             node_B (int): The second node of the meshed plate.
             node_C (int): The third node of the meshed plate.
             node_D (int, optional): The fourth node of the meshed plate. Set this to None if the meshed plate is triangular. Defaults to None.
-            rotZ (float, optional): Rotation of this plate about the plate's local Z axis, in degrees. Defaults to 0.
+            rotZ (float, optional): Rotation of this plate about the plate's local z-axis, in degrees. Defaults to 0.
 
         Returns:
             int: The ID of the new meshed plate element.

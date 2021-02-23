@@ -1,11 +1,11 @@
-# The SkyCiv NPM Package
+# The SkyCiv Pip Package
 
 This package provides helpful tools to create objects and interact with the SkyCiv API. These components can be used to quickly construct models by providing code completion, parameter information and examples.
 
 >***Note: We strongly recommend using VSCode and the Pylance plugin for VSCode. Pylance is still in preview mode and requires some polishing however, it will help provide intellisense options as seen in the image below.***
 
 <div style="text-align: center;">
-    <img style="max-width: 100%" src="./img/intellisense.png"/>
+    <img style="max-width: 100%" src="https://github.com/skyciv/skyciv-pip/raw/master/img/intellisense.png"/>
 </div>
 
 ----
@@ -14,7 +14,7 @@ This package provides helpful tools to create objects and interact with the SkyC
 
 The SkyCiv API documentation can be found here: https://skyciv.com/api/v3/
 
-The Python Pip package documentation is a work in progress but for now, you can refer to the [JavaScript package docs](https://skyciv.com/api/v3/npm-package-docs/1.2.0) which is not exactly the same but very similar. The main difference being that methods use `snake_case` in python rather than `camelCase` in JavaScript.
+The Python Pip package documentation is a work in progress but for now, you can refer to the [JavaScript package docs](https://skyciv.com/api/v3/docs/packages/#npm---javascript) which are not exactly the same but very similar. The main difference being that methods use `snake_case` in python rather than `camelCase` in JavaScript.
 
 For example, `sections.loadCustomFromLibrary()` in the NPM package would translate to `sections.load_custom_from_library()` for the Pip package.
 
@@ -30,6 +30,7 @@ pip3 install skyciv
 
 ## Example
 
+The recommended use of this package is by using the `Model()` and `ApiObject()` classes.
 
 ```py
 import skyciv
@@ -157,7 +158,7 @@ model.pressures.add(1, "global", 0, 0, 0.1, "LG1")
 model.area_loads.add("one_way", [23, 24, 25, 26], 1.3, "Z", column_direction=[23, 26], LG="LG1")
 
 # Selfweight
-model.self_weight.enable(0, -1, 0)
+model.self_weight.add(y=-1, LG="SW1")
 
 # Make a load combination
 model.load_combinations.add("SW1 + LG1", {"SW1": 1, "LG1": 1})
@@ -183,7 +184,7 @@ print(res["response"])
 
 Now, we can even view the model in [S3D](https://platform.skyciv.com/structural).
 <div style="text-align: center;">
-    <img style="max-width: 100%" src="./img/result-in-s3d.png"/>
+    <img style="max-width: 100%" src="https://github.com/skyciv/skyciv-pip/raw/master/img/result-in-s3d.png"/>
 </div>
 
 ----
@@ -197,7 +198,7 @@ For example:
 By typing something like this: `skyciv.sections.aus300150ub`.
 
 <div style="text-align: center;">
-    <img style="max-width: 100%" src="./img/sections-autocomplete.png"/>
+    <img style="max-width: 100%" src="https://github.com/skyciv/skyciv-pip/raw/master/img/sections-autocomplete.png"/>
 </div>
 
 Intellisense will offer the closest sections which you can select with autocompletion. Resulting in the path shown below.
@@ -246,6 +247,9 @@ Visit the [API docs](https://skyciv.com/api/v3/docs/getting-started) for instruc
 
 | Version  | Breaking          | Description     |
 | :---     | :---              | :---            |
+| 1.1.3    | Breaks `model.self_weight`. | • `Model().set` method now can now accept a downloaded JSON model from platform.skyciv.com/structural.<br/>• Fixed self_weight data structure.<br/>• `Functions` and `Function` class now defaults `args` to an empty object.|
+| 1.1.2    | false             | • Typos.<br/>• Improved in-code docs.<br/>• Fixed Canadian bridging channel lookup in `skyciv.sections`.<br/>• The `request()` method of the `ApiObject()` will now automatically store the `last_session_id` to the `auth.session_id` property of the `ApiObject` instance. |
+| 1.1.1    | false             | • README.md patch. |
 | 1.1.0    | false             | • Added 37 new classes including the `ApiObject()` and `Model()` classes. |
 | 1.0.4    | false             | • Package will now only use dumps on input if `api_object` is not a string. |
 | 1.0.3    | false             | • Fixed options dictionary to be optional. |

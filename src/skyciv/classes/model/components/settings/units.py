@@ -150,3 +150,7 @@ class Units:
         """Get the units object as a Python dictionary.
         """
         return clone(vars(self))
+
+
+    def __getitem__(self, item):
+        return getattr(self, item)

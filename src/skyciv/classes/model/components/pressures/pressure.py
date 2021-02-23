@@ -3,7 +3,7 @@ from typing import Literal
 
 class Pressure:
     def __init__(self,
-                 plate_id: int,
+                 plate_id: int = None,
                  axes: Literal["global", "local"] = 'global',
                  x_mag: float = 0,
                  y_mag: float = 0,
@@ -15,9 +15,9 @@ class Pressure:
         Args:
             plate_id (int): The plate to which the pressure is applied. Identified by the plate ID.
             axes (str, optional): The axes in which the distributed load will be applied. Defaults to 'global'. {"global" | "local"}.
-            x_mag (float, optional): Magnitude of pressure in the x direction of the specified axes, in the units of the pressure property of the units object. Defaults to 0.
-            y_mag (float, optional): Magnitude of pressure in the y direction of the specified axes, in the units of the pressure property of the units object. Defaults to 0.
-            z_mag (float, optional): Magnitude of pressure in the z direction of the specified axes, in the units of the pressure property of the units object. Defaults to 0.
+            x_mag (float, optional): The magnitude of the pressure in the x-direction of the specified axes, in the units of the pressure property of the units object. Defaults to 0.
+            y_mag (float, optional): The magnitude of the pressure in the y-direction of the specified axes, in the units of the pressure property of the units object. Defaults to 0.
+            z_mag (float, optional): The magnitude of the pressure in the z-direction of the specified axes, in the units of the pressure property of the units object. Defaults to 0.
             load_group (str, optional): The group to which this load belongs. Defaults to None.
         """
         self.plate_id = plate_id
