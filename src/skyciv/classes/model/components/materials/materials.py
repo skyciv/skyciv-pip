@@ -55,22 +55,26 @@ class Materials(ModelCollectionComponent):
                                     "Concrete",
                                     "Concrete High Strength",
                                     "Oakwood",
-                                    "Glass"]) -> int:
+                                    "Glass"], unit_system: str = "metric") -> int:
         """Add a default material to the model.
 
         Args:
             material (str): The material name. {"Structural Steel" | "Aluminium" | "Carbon Fibre Reinforced Plastic" | "Concrete" | "Concrete High Strength" | "Oakwood" | "Glass"}.
+            unit_system (str): {'metric' | 'imperial'}
 
         Returns:
             int: The ID of the created material.
         """
-        name = default_materials[material]["name"]
-        density = default_materials[material]["density"]
-        elasticity_modulus = default_materials[material]["elasticity_modulus"]
-        poissons_ratio = default_materials[material]["poissons_ratio"]
-        yield_strength = default_materials[material]["yield_strength"]
-        ultimate_strength = default_materials[material]["ultimate_strength"]
-        _class = default_materials[material]["class"]
+
+        materials = default_materials[unit_system][material]
+
+        name = materials["name"]
+        density = materials["density"]
+        elasticity_modulus = materials["elasticity_modulus"]
+        poissons_ratio = materials["poissons_ratio"]
+        yield_strength = materials["yield_strength"]
+        ultimate_strength = materials["ultimate_strength"]
+        _class = materials["class"]
 
         index = self.add_custom(
             name,

@@ -151,6 +151,16 @@ class Units:
         """
         return clone(vars(self))
 
+    def get_unit_system(self) -> str:
+        """Determines the unit system based on the length units.
+
+        Returns:
+            str: The unit system.
+        """
+        if (self.length in ['m', 'mm']):
+            return 'metric'
+        else:
+            return 'imperial'
 
     def __getitem__(self, item):
         return getattr(self, item)

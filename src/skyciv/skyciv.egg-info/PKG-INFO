@@ -166,7 +166,7 @@ Description: # The SkyCiv Pip Package
         model.area_loads.add("one_way", [23, 24, 25, 26], 1.3, "Z", column_direction=[23, 26], LG="LG1")
         
         # Selfweight
-        model.self_weight.enable(0, -1, 0)
+        model.self_weight.add(y=-1, LG="SW1")
         
         # Make a load combination
         model.load_combinations.add("SW1 + LG1", {"SW1": 1, "LG1": 1})

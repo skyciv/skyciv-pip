@@ -129,8 +129,10 @@ model.sections.add_library_section(
     skyciv.sections.Australian_Steel_300_Grade_Universal_beams_150_UB_14_0, 1)
 
 # Material
-model.materials.add("Structural Steel")
-# or : model.materials.addCustom("Custom Steel", 7850, 210000, 0.29, 300, 440, "steel")
+model.materials.add("Structural Steel")  # For metric
+# model.materials.add("Structural Steel", "imperial") # For imperial
+# model.materials.add("Structural Steel", model.settings.units.get_unit_system())  # For the model's current units
+# model.materials.addCustom("Custom Steel", 7850, 210000, 0.29, 300, 440, "steel") # For custom material
 
 # Supports
 model.supports.add(32, "FFFFRR")
@@ -247,6 +249,7 @@ Visit the [API docs](https://skyciv.com/api/v3/docs/getting-started) for instruc
 
 | Version  | Breaking          | Description     |
 | :---     | :---              | :---            |
+| 1.2.0    | false | • `Materials.add()` method now takes a second parameter for units. See sample above.
 | 1.1.3    | Breaks `model.self_weight`. | • `Model().set` method now can now accept a downloaded JSON model from platform.skyciv.com/structural.<br/>• Fixed self_weight data structure.<br/>• `Functions` and `Function` class now defaults `args` to an empty object.|
 | 1.1.2    | false             | • Typos.<br/>• Improved in-code docs.<br/>• Fixed Canadian bridging channel lookup in `skyciv.sections`.<br/>• The `request()` method of the `ApiObject()` will now automatically store the `last_session_id` to the `auth.session_id` property of the `ApiObject` instance. |
 | 1.1.1    | false             | • README.md patch. |
