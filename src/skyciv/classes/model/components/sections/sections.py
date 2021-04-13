@@ -1,6 +1,6 @@
-from classes.model.components.sections.section import Section
-from utils.helpers import next_object_key
-from classes.model.components._base_class.model_collection_component import ModelCollectionComponent
+from skyciv.classes.model.components.sections.section import Section
+from skyciv.utils.helpers import next_object_key
+from skyciv.classes.model.components._base_class.model_collection_component import ModelCollectionComponent
 
 
 class Sections(ModelCollectionComponent):

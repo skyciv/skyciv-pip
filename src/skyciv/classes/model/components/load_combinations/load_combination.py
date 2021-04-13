@@ -1,4 +1,4 @@
-from classes.model.components._base_class.model_collection_component import ModelCollectionComponent
+from skyciv.classes.model.components._base_class.model_collection_component import ModelCollectionComponent
 
 
 class LoadCombination(ModelCollectionComponent):

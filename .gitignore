@@ -1,0 +1,6 @@
+.DS_Store
+build/
+dist/
+_docs/
+__pycache__/
+doc-gen.py

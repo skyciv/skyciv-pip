@@ -1,7 +1,7 @@
 from typing import Literal
-from classes.model.components.members.member import Member
-from utils.helpers import next_object_key
-from classes.model.components._base_class.model_collection_component import ModelCollectionComponent
+from skyciv.classes.model.components.members.member import Member
+from skyciv.utils.helpers import next_object_key
+from skyciv.classes.model.components._base_class.model_collection_component import ModelCollectionComponent
 
 
 class Members(ModelCollectionComponent):
@@ -15,7 +15,8 @@ class Members(ModelCollectionComponent):
         section_id: int,
         fixity_A: str = 'FFFFFF',
         fixity_B: str = 'FFFFFF',
-        type: Literal["normal", "normal_continuous", "cable", "rigid"] = 'normal',
+        type: Literal["normal", "normal_continuous",
+                      "cable", "rigid"] = 'normal',
         cable_length: float = None
     ) -> int:
         """Create a member with the next available ID.

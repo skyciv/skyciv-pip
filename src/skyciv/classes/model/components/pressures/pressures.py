@@ -1,7 +1,7 @@
 from typing import Literal
-from classes.model.components.pressures.pressure import Pressure
-from utils.helpers import next_object_key
-from classes.model.components._base_class.model_collection_component import ModelCollectionComponent
+from skyciv.classes.model.components.pressures.pressure import Pressure
+from skyciv.utils.helpers import next_object_key
+from skyciv.classes.model.components._base_class.model_collection_component import ModelCollectionComponent
 
 
 class Pressures(ModelCollectionComponent):

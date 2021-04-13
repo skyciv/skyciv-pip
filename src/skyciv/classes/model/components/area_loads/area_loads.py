@@ -1,7 +1,7 @@
 from typing import Literal
-from classes.model.components._base_class.model_collection_component import ModelCollectionComponent
-from classes.model.components.area_loads.area_load import AreaLoad
-from utils.helpers import keyvals, next_object_key
+from skyciv.classes.model.components._base_class.model_collection_component import ModelCollectionComponent
+from skyciv.classes.model.components.area_loads.area_load import AreaLoad
+from skyciv.utils.helpers import keyvals, next_object_key
 
 
 class AreaLoads(ModelCollectionComponent):

@@ -1,6 +1,6 @@
-from classes.model.components._base_class.model_collection_component import ModelCollectionComponent
-from classes.model.components.load_combinations.load_combination import LoadCombination
-from utils.helpers import next_object_key
+from skyciv.classes.model.components._base_class.model_collection_component import ModelCollectionComponent
+from skyciv.classes.model.components.load_combinations.load_combination import LoadCombination
+from skyciv.utils.helpers import next_object_key
 
 
 class LoadCombinations(ModelCollectionComponent):

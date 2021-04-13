@@ -1,12 +1,12 @@
 
 import json
 from typing import Literal
-from classes.auth.auth_object import AuthObject
-from classes.functions.api_functions import ApiFunctions
-from classes.options.options_object import OptionsObject
-from utils.helpers import clone, keyvals
+from skyciv.classes.auth.auth_object import AuthObject
+from skyciv.classes.functions.api_functions import ApiFunctions
+from skyciv.classes.options.options_object import OptionsObject
+from skyciv.utils.helpers import clone, keyvals
 
-from lib.request import request
+from skyciv.lib.request import request
 
 
 class ApiObject:

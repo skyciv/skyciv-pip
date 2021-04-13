@@ -1,21 +1,21 @@
 from typing import Literal
-from classes.model.components.area_loads.area_loads import AreaLoads
-from classes.model.components.distributed_loads.distributed_loads import DistributedLoads
-from classes.model.components.load_combinations.load_combinations import LoadCombinations
-from classes.model.components.materials.materials import Materials
-from classes.model.components.members.members import Members
-from classes.model.components.meshed_plates.meshed_plates import MeshedPlates
-from classes.model.components.moments.moments import Moments
-from classes.model.components.nodes.nodes import Nodes
-from classes.model.components.plates.plates import Plates
-from classes.model.components.point_loads.point_loads import PointLoads
-from classes.model.components.pressures.pressures import Pressures
-from classes.model.components.sections.sections import Sections
-from classes.model.components.self_weights.self_weights import SelfWeights
-from classes.model.components.settings.settings import Settings
-from classes.model.components.settlements.settlements import Settlements
-from classes.model.components.supports.supports import Supports
-from utils.helpers import clone, has_get_method, keyvals
+from skyciv.classes.model.components.area_loads.area_loads import AreaLoads
+from skyciv.classes.model.components.distributed_loads.distributed_loads import DistributedLoads
+from skyciv.classes.model.components.load_combinations.load_combinations import LoadCombinations
+from skyciv.classes.model.components.materials.materials import Materials
+from skyciv.classes.model.components.members.members import Members
+from skyciv.classes.model.components.meshed_plates.meshed_plates import MeshedPlates
+from skyciv.classes.model.components.moments.moments import Moments
+from skyciv.classes.model.components.nodes.nodes import Nodes
+from skyciv.classes.model.components.plates.plates import Plates
+from skyciv.classes.model.components.point_loads.point_loads import PointLoads
+from skyciv.classes.model.components.pressures.pressures import Pressures
+from skyciv.classes.model.components.sections.sections import Sections
+from skyciv.classes.model.components.self_weights.self_weights import SelfWeights
+from skyciv.classes.model.components.settings.settings import Settings
+from skyciv.classes.model.components.settlements.settlements import Settlements
+from skyciv.classes.model.components.supports.supports import Supports
+from skyciv.utils.helpers import clone, has_get_method, keyvals
 
 
 class Model:

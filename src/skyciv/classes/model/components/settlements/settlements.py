@@ -1,6 +1,6 @@
-from classes.model.components.settlements.settlement import Settlement
-from utils.helpers import keyvals, next_object_key
-from classes.model.components._base_class.model_collection_component import ModelCollectionComponent
+from skyciv.classes.model.components.settlements.settlement import Settlement
+from skyciv.utils.helpers import keyvals, next_object_key
+from skyciv.classes.model.components._base_class.model_collection_component import ModelCollectionComponent
 
 
 class Settlements(ModelCollectionComponent):

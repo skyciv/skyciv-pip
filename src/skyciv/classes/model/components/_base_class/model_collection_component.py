@@ -1,4 +1,4 @@
-from utils.helpers import clone, keyvals
+from skyciv.utils.helpers import clone, keyvals
 
 
 class ModelCollectionComponent:

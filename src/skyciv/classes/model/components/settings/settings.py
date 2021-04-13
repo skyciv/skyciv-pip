@@ -1,6 +1,6 @@
 from typing import Literal
-from classes.model.components.settings.units import Units
-from utils.helpers import clone
+from skyciv.classes.model.components.settings.units import Units
+from skyciv.utils.helpers import clone
 
 
 class Settings:

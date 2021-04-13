@@ -1,6 +1,6 @@
-from classes.model.components.meshed_plates.meshed_plate import MeshedPlate
-from utils.helpers import next_object_key
-from classes.model.components._base_class.model_collection_component import ModelCollectionComponent
+from skyciv.classes.model.components.meshed_plates.meshed_plate import MeshedPlate
+from skyciv.utils.helpers import next_object_key
+from skyciv.classes.model.components._base_class.model_collection_component import ModelCollectionComponent
 
 
 class MeshedPlates(ModelCollectionComponent):

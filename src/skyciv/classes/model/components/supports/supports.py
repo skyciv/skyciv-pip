@@ -1,6 +1,6 @@
-from classes.model.components.supports.support import Support
-from utils.helpers import keyvals, next_object_key
-from classes.model.components._base_class.model_collection_component import ModelCollectionComponent
+from skyciv.classes.model.components.supports.support import Support
+from skyciv.utils.helpers import keyvals, next_object_key
+from skyciv.classes.model.components._base_class.model_collection_component import ModelCollectionComponent
 
 
 class Supports(ModelCollectionComponent):

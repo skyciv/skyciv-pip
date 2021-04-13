@@ -1,6 +1,6 @@
-from classes.model.components.nodes.node import Node
-from utils.helpers import next_object_key
-from classes.model.components._base_class.model_collection_component import ModelCollectionComponent
+from skyciv.classes.model.components.nodes.node import Node
+from skyciv.utils.helpers import next_object_key
+from skyciv.classes.model.components._base_class.model_collection_component import ModelCollectionComponent
 
 
 class Nodes(ModelCollectionComponent):

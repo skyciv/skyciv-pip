@@ -1,4 +1,4 @@
-from utils.helpers import clone
+from skyciv.utils.helpers import clone
 
 
 class OptionsObject:
