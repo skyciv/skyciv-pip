@@ -9,7 +9,7 @@ class Plates(ModelCollectionComponent):
     """
 
     def add(self,
-            nodes: list[int] = None,
+            nodes: 'list[int]' = None,
             thickness: float = None,
             material_id: int = None,
             rotZ: float = 0,
@@ -20,7 +20,7 @@ class Plates(ModelCollectionComponent):
             shear_thickness: float = None,
             bending_thickness: float = None,
             state: Literal["stress", "strain"] = 'stress',
-            holes: list[int] = None,
+            holes: 'list[int]' = None,
             is_meshed: bool = False
             ) -> int:
         """Create a plate with the next available ID.
@@ -67,7 +67,7 @@ class Plates(ModelCollectionComponent):
 
         return next_index
 
-    def get_plate_ids_from_node_ids(self, nodes: list[int]) -> list[int]:
+    def get_plate_ids_from_node_ids(self, nodes: 'list[int]') -> 'list[int]':
         """Get the IDs of all plates that match the provided nodes array. Node order IS considered.
 
         Args:

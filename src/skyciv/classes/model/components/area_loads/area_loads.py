@@ -10,7 +10,7 @@ class AreaLoads(ModelCollectionComponent):
 
     def add(self,
             type: Literal["one_way", "two_way", "column_wind_load", "open_structure"],
-            nodes: list[int],
+            nodes: 'list[int]',
             mag: float,
             direction: Literal["X", "Y", "Z"],
             elevations: str = 0,
@@ -57,7 +57,7 @@ class AreaLoads(ModelCollectionComponent):
 
         return next_index
 
-    def get_area_load_ids_from_node_ids(self, nodes: list[int]) -> list[int]:
+    def get_area_load_ids_from_node_ids(self, nodes: 'list[int]') -> 'list[int]':
         """Get the IDs of all area loads that match the provided nodes array. Node order IS considered.
 
         Args:

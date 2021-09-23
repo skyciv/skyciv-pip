@@ -50,7 +50,7 @@ def has_get_method(dict: dict) -> bool:
     return False
 
 
-def keyvals(obj: dict) -> list[list]:
+def keyvals(obj: dict) -> 'list[list]':
     """Return the key value pairs of a class or dictionary.
     Args:
         obj (dict): A class or dictionary.
@@ -65,7 +65,7 @@ def keyvals(obj: dict) -> list[list]:
         return vars(obj).items()
 
 
-def keys(obj: dict) -> list[list]:
+def keys(obj: dict) -> 'list[list]':
     """Return the keys of a class or dictionary.
     Args:
         obj (dict): A class or dictionary.

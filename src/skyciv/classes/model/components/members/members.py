@@ -52,7 +52,7 @@ class Members(ModelCollectionComponent):
         setattr(self, str(next_index), member)
         return next_index
 
-    def get_member_ids_from_nodes_ids(self, node_A: int, node_B: int) -> list[int]:
+    def get_member_ids_from_nodes_ids(self, node_A: int, node_B: int) -> 'list[int]':
         """Get the IDs of all members by its end nodes.
 
         Args:

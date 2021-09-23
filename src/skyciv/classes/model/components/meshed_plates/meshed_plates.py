@@ -32,7 +32,7 @@ class MeshedPlates(ModelCollectionComponent):
         setattr(self, str(next_index), mp)
         return next_index
 
-    def get_meshed_plate_ids_from_nodes_ids(self, node_A: int, node_B: int, node_C: int, node_D: int = None) -> list[int]:
+    def get_meshed_plate_ids_from_nodes_ids(self, node_A: int, node_B: int, node_C: int, node_D: int = None) -> 'list[int]':
         """Get the IDs of all meshed plates by corner nodes.
 
         Args:
