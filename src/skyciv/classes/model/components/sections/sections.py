@@ -7,7 +7,7 @@ class Sections(ModelCollectionComponent):
     """Creates an instance of the SkyCiv Sections class.
     """
 
-    def add_library_section(self, path: list[str], material_id: int) -> int:
+    def add_library_section(self, path: 'list[str]', material_id: int) -> int:
         """Add a section from the SkyCiv section library.
 
         Args:
@@ -43,7 +43,7 @@ class Sections(ModelCollectionComponent):
         setattr(self, str(next_index), new_section)
         return next_index
 
-    def ids_from_path(self, path: list[str]) -> list[int]:
+    def ids_from_path(self, path: 'list[str]') -> 'list[int]':
         """Get all sections that match a SkyCiv section library path.
 
         Args:

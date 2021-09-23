@@ -4,7 +4,7 @@ from typing import Literal
 class Plate:
     def __init__(
         self,
-        nodes: list[int] = None,
+        nodes: 'list[int]' = None,
         thickness: float = None,
         material_id: int = None,
         rotZ: float = 0,
@@ -15,7 +15,7 @@ class Plate:
         shear_thickness: float = None,
         bending_thickness: float = None,
         state: Literal["stress", "strain"] = 'stress',
-        holes: list[int] = None,
+        holes: 'list[int]' = None,
         is_meshed: bool = False
     ) -> None:
         """Creates an instance of the SkyCiv Plate class.

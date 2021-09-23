@@ -6,7 +6,7 @@ class Section:
         for key in self.__dict__.keys():
             del self[key]
 
-    def load_section_from_library(self, path: list[str], material_id: int) -> None:
+    def load_section_from_library(self, path: 'list[str]', material_id: int) -> None:
         """Set the section from the SkyCiv section library.
 
         Args:
