@@ -1,6 +1,8 @@
-
-from typing import Literal
 from skyciv.utils.helpers import clone
+try:
+    from typing import Literal
+except ImportError:
+    from typing_extensions import Literal
 
 
 class Units:

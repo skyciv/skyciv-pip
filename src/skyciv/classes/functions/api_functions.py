@@ -1,8 +1,10 @@
-from typing import Literal
 from skyciv.classes.functions.api_function import ApiFunction
 from skyciv.classes.model.components.load_combinations.load_combinations import LoadCombinations
 from skyciv.utils.helpers import clone, has_get_method, keyvals
-
+try:
+    from typing import Literal
+except ImportError:
+    from typing_extensions import Literal
 
 class ApiFunctions:
 

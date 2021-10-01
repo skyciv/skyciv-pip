@@ -2,13 +2,13 @@
 
 This package provides helpful tools to create objects and interact with the SkyCiv API. These components can be used to quickly construct models by providing code completion, parameter information and examples.
 
->***Note: We strongly recommend using VSCode and the Pylance plugin for VSCode. Pylance is still in preview mode and requires some polishing however, it will help provide intellisense options as seen in the image below.***
+> **_Note: We strongly recommend using VSCode and the Pylance plugin for VSCode. Pylance is still in preview mode and requires some polishing however, it will help provide intellisense options as seen in the image below._**
 
 <div style="text-align: center;">
     <img style="max-width: 100%" src="https://github.com/skyciv/skyciv-pip/raw/master/img/intellisense.png"/>
 </div>
 
-----
+---
 
 ## Documentation
 
@@ -18,7 +18,7 @@ The Python Pip package documentation is a work in progress but for now, you can 
 
 For example, `sections.loadCustomFromLibrary()` in the NPM package would translate to `sections.load_custom_from_library()` for the Pip package.
 
-----
+---
 
 ## Install
 
@@ -26,7 +26,7 @@ For example, `sections.loadCustomFromLibrary()` in the NPM package would transla
 pip3 install skyciv
 ```
 
-----
+---
 
 ## Example
 
@@ -185,11 +185,12 @@ print(res["response"])
 ```
 
 Now, we can even view the model in [S3D](https://platform.skyciv.com/structural).
+
 <div style="text-align: center;">
     <img style="max-width: 100%" src="https://github.com/skyciv/skyciv-pip/raw/master/img/result-in-s3d.png"/>
 </div>
 
-----
+---
 
 ## Sections Database
 
@@ -214,11 +215,12 @@ path = skyciv.sections.Australian_Steel_300_Grade_Universal_beams_150_UB_14_0
 
 Although it does not look great, this way, auto completion will ensure the string arrays are correct.
 
-----
+---
 
 ## Global Methods
 
 ### `skyciv.request(api_object, options?)`
+
 Make a request to the SkyCiv API.
 
 ```py
@@ -228,8 +230,8 @@ skyciv_response = skyciv.request(api_object, options)
 
 #### Options (optional dictionary)
 
-* *version* - _2 | 3_ (Defaults to 3)
-* *http_or_https* - _http | https_ (Defaults to https)
+-   _version_ - _2 | 3_ (Defaults to 3)
+-   _http_or_https_ - _http | https_ (Defaults to https)
 
 ```py
 options = {
@@ -238,26 +240,28 @@ options = {
 }
 ```
 
-----
+---
 
 ## Manually building the API Object
+
 Visit the [API docs](https://skyciv.com/api/v3/docs/getting-started) for instructions on how to create an instance of the SkyCiv API object.
 
-----
+---
 
 ## Changelog
 
-| Version  | Breaking          | Description     |
-| :---     | :---              | :---            |
-| 2.0.3    | false 			   | Fixed packaging bug. |
-| 2.0.0    | Breaks `model.plates`. | • Plates can now have additional attributes: `diaphragm`, `membrane_thickness`, `bending_thickness`, `shear_thickness`, `holes`. This may misalign inputs of existing plates.<br/>• `plate.type` now defaults to `"auto"`. |
-| 1.2.0    | false | • `Materials.add()` method now takes a second parameter for units. See sample above. |
-| 1.1.3    | Breaks `model.self_weight`. | • `Model().set` method now can now accept a downloaded JSON model from platform.skyciv.com/structural.<br/>• Fixed self_weight data structure.<br/>• `Functions` and `Function` class now defaults `args` to an empty object.|
-| 1.1.2    | false             | • Typos.<br/>• Improved in-code docs.<br/>• Fixed Canadian bridging channel lookup in `skyciv.sections`.<br/>• The `request()` method of the `ApiObject()` will now automatically store the `last_session_id` to the `auth.session_id` property of the `ApiObject` instance. |
-| 1.1.1    | false             | • README.md patch. |
-| 1.1.0    | false             | • Added 37 new classes including the `ApiObject()` and `Model()` classes. |
-| 1.0.4    | false             | • Package will now only use dumps on input if `api_object` is not a string. |
-| 1.0.3    | false             | • Fixed options dictionary to be optional. |
-| 1.0.2    | false             | • Updated readme. |
-| 1.0.1    | false             | • Changed `skyciv.request()`. to print msg if SkyCiv returns error rather than throw an exception. |
-| 1.0.0    | -                 | Initial release. |
+| Version | Breaking                    | Description                                                                                                                                                                                                                                                                  |
+| :------ | :-------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2.0.4   | false                       | Fixed dependency issue affecting Python 3.7 It should fix the error `TypeError: 'type' object is not subscriptable` and the error `cannot import name 'Literal' from 'typing'`.                                                                                                                                                                                                                                                         |
+| 2.0.3   | false                       | Fixed packaging bug.                                                                                                                                                                                                                                                         |
+| 2.0.0   | Breaks `model.plates`.      | • Plates can now have additional attributes: `diaphragm`, `membrane_thickness`, `bending_thickness`, `shear_thickness`, `holes`. This may misalign inputs of existing plates.<br/>• `plate.type` now defaults to `"auto"`.                                                   |
+| 1.2.0   | false                       | • `Materials.add()` method now takes a second parameter for units. See sample above.                                                                                                                                                                                         |
+| 1.1.3   | Breaks `model.self_weight`. | • `Model().set` method now can now accept a downloaded JSON model from platform.skyciv.com/structural.<br/>• Fixed self_weight data structure.<br/>• `Functions` and `Function` class now defaults `args` to an empty object.                                                |
+| 1.1.2   | false                       | • Typos.<br/>• Improved in-code docs.<br/>• Fixed Canadian bridging channel lookup in `skyciv.sections`.<br/>• The `request()` method of the `ApiObject()` will now automatically store the `last_session_id` to the `auth.session_id` property of the `ApiObject` instance. |
+| 1.1.1   | false                       | • README.md patch.                                                                                                                                                                                                                                                           |
+| 1.1.0   | false                       | • Added 37 new classes including the `ApiObject()` and `Model()` classes.                                                                                                                                                                                                    |
+| 1.0.4   | false                       | • Package will now only use dumps on input if `api_object` is not a string.                                                                                                                                                                                                  |
+| 1.0.3   | false                       | • Fixed options dictionary to be optional.                                                                                                                                                                                                                                   |
+| 1.0.2   | false                       | • Updated readme.                                                                                                                                                                                                                                                            |
+| 1.0.1   | false                       | • Changed `skyciv.request()`. to print msg if SkyCiv returns error rather than throw an exception.                                                                                                                                                                           |
+| 1.0.0   | -                           | Initial release.                                                                                                                                                                                                                                                             |

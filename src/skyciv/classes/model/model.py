@@ -1,4 +1,3 @@
-from typing import Literal
 from skyciv.classes.model.components.area_loads.area_loads import AreaLoads
 from skyciv.classes.model.components.distributed_loads.distributed_loads import DistributedLoads
 from skyciv.classes.model.components.load_combinations.load_combinations import LoadCombinations
@@ -16,6 +15,11 @@ from skyciv.classes.model.components.settings.settings import Settings
 from skyciv.classes.model.components.settlements.settlements import Settlements
 from skyciv.classes.model.components.supports.supports import Supports
 from skyciv.utils.helpers import clone, has_get_method, keyvals
+
+try:
+    from typing import Literal
+except ImportError:
+    from typing_extensions import Literal
 
 
 class Model:

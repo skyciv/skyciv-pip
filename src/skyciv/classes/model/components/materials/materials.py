@@ -1,8 +1,12 @@
-from typing import Literal
 from skyciv.classes.model.components._base_class.model_collection_component import ModelCollectionComponent
 from skyciv.classes.model.components.materials.default_materials import default_materials
 from skyciv.classes.model.components.materials.material import Material
 from skyciv.utils.helpers import next_object_key
+
+try:
+    from typing import Literal
+except ImportError:
+    from typing_extensions import Literal
 
 
 class Materials(ModelCollectionComponent):

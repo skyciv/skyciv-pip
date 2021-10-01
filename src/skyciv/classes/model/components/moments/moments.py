@@ -1,8 +1,10 @@
-from typing import Literal
 from skyciv.classes.model.components.moments.moment import Moment
 from skyciv.utils.helpers import next_object_key
 from skyciv.classes.model.components._base_class.model_collection_component import ModelCollectionComponent
-
+try:
+    from typing import Literal
+except ImportError:
+    from typing_extensions import Literal
 
 class Moments(ModelCollectionComponent):
     """Creates an instance of the SkyCiv Moments class.

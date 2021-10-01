@@ -1,13 +1,14 @@
 from skyciv.classes.model.components.sections.section import Section
 from skyciv.utils.helpers import next_object_key
 from skyciv.classes.model.components._base_class.model_collection_component import ModelCollectionComponent
+from typing import List
 
 
 class Sections(ModelCollectionComponent):
     """Creates an instance of the SkyCiv Sections class.
     """
 
-    def add_library_section(self, path: list[str], material_id: int) -> int:
+    def add_library_section(self, path: List[str], material_id: int) -> int:
         """Add a section from the SkyCiv section library.
 
         Args:
@@ -43,7 +44,7 @@ class Sections(ModelCollectionComponent):
         setattr(self, str(next_index), new_section)
         return next_index
 
-    def ids_from_path(self, path: list[str]) -> list[int]:
+    def ids_from_path(self, path: List[str]) -> List[int]:
         """Get all sections that match a SkyCiv section library path.
 
         Args:

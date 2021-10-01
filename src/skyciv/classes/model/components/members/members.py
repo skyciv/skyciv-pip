@@ -1,7 +1,11 @@
-from typing import Literal
 from skyciv.classes.model.components.members.member import Member
 from skyciv.utils.helpers import next_object_key
 from skyciv.classes.model.components._base_class.model_collection_component import ModelCollectionComponent
+from typing import List
+try:
+    from typing import Literal
+except ImportError:
+    from typing_extensions import Literal
 
 
 class Members(ModelCollectionComponent):
@@ -52,7 +56,7 @@ class Members(ModelCollectionComponent):
         setattr(self, str(next_index), member)
         return next_index
 
-    def get_member_ids_from_nodes_ids(self, node_A: int, node_B: int) -> list[int]:
+    def get_member_ids_from_nodes_ids(self, node_A: int, node_B: int) -> List[int]:
         """Get the IDs of all members by its end nodes.
 
         Args:

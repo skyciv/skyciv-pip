@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Section:
 
     def clear_self(self) -> None:
@@ -6,7 +9,7 @@ class Section:
         for key in self.__dict__.keys():
             del self[key]
 
-    def load_section_from_library(self, path: list[str], material_id: int) -> None:
+    def load_section_from_library(self, path: List[str], material_id: int) -> None:
         """Set the section from the SkyCiv section library.
 
         Args:
@@ -14,7 +17,7 @@ class Section:
             material_id (int): The ID of the material that is assigned to the section.
 
         Example::
-        
+
             path = ["American", "AISC", "W shapes", "W14x22"]
         """
         self.clear_self()

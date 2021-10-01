@@ -1,7 +1,11 @@
-from typing import Literal
 from skyciv.classes.model.components.pressures.pressure import Pressure
 from skyciv.utils.helpers import next_object_key
 from skyciv.classes.model.components._base_class.model_collection_component import ModelCollectionComponent
+
+try:
+    from typing import Literal
+except ImportError:
+    from typing_extensions import Literal
 
 
 class Pressures(ModelCollectionComponent):

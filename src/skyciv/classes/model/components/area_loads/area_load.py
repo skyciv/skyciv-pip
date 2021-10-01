@@ -1,12 +1,16 @@
+from typing import List
 
-from typing import Literal
+try:
+    from typing import Literal
+except ImportError:
+    from typing_extensions import Literal
 
 
 class AreaLoad:
     def __init__(self,
                  type: Literal["one_way", "two_way",
                                "column_wind_load", "open_structure"] = None,
-                 nodes: list[int] = None,
+                 nodes: List[int] = None,
                  mag: float = None,
                  direction: Literal["X", "Y", "Z"] = None,
                  elevations: str = None,

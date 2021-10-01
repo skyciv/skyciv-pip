@@ -1,5 +1,6 @@
 import copy
 import types
+from typing import List
 
 
 def clone(dict: dict) -> dict:
@@ -45,12 +46,11 @@ def has_get_method(dict: dict) -> bool:
     get_method = getattr(dict, "get", None)
     if callable(get_method):
         if get_method != None and not isinstance(get_method, types.BuiltinFunctionType):
-            # s3d_model[k] = v.get()
             return True
     return False
 
 
-def keyvals(obj: dict) -> list[list]:
+def keyvals(obj: dict) -> List[list]:
     """Return the key value pairs of a class or dictionary.
     Args:
         obj (dict): A class or dictionary.
@@ -65,7 +65,7 @@ def keyvals(obj: dict) -> list[list]:
         return vars(obj).items()
 
 
-def keys(obj: dict) -> list[list]:
+def keys(obj: dict) -> List[list]:
     """Return the keys of a class or dictionary.
     Args:
         obj (dict): A class or dictionary.

@@ -1,7 +1,7 @@
 from skyciv.classes.model.components.meshed_plates.meshed_plate import MeshedPlate
 from skyciv.utils.helpers import next_object_key
 from skyciv.classes.model.components._base_class.model_collection_component import ModelCollectionComponent
-
+from typing import List
 
 class MeshedPlates(ModelCollectionComponent):
     """Creates an instance of the SkyCiv MeshedPlates class.
@@ -32,7 +32,7 @@ class MeshedPlates(ModelCollectionComponent):
         setattr(self, str(next_index), mp)
         return next_index
 
-    def get_meshed_plate_ids_from_nodes_ids(self, node_A: int, node_B: int, node_C: int, node_D: int = None) -> list[int]:
+    def get_meshed_plate_ids_from_nodes_ids(self, node_A: int, node_B: int, node_C: int, node_D: int = None) -> List[int]:
         """Get the IDs of all meshed plates by corner nodes.
 
         Args:

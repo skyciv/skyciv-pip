@@ -1,8 +1,12 @@
-from typing import Literal
 from skyciv.classes.model.components._base_class.model_collection_component import ModelCollectionComponent
 from skyciv.classes.model.components.area_loads.area_load import AreaLoad
 from skyciv.utils.helpers import keyvals, next_object_key
+from typing import List
 
+try:
+    from typing import Literal
+except ImportError:
+    from typing_extensions import Literal
 
 class AreaLoads(ModelCollectionComponent):
     """Creates an instance of the SkyCiv AreaLoads class.
@@ -10,7 +14,7 @@ class AreaLoads(ModelCollectionComponent):
 
     def add(self,
             type: Literal["one_way", "two_way", "column_wind_load", "open_structure"],
-            nodes: list[int],
+            nodes: List[int],
             mag: float,
             direction: Literal["X", "Y", "Z"],
             elevations: str = 0,
@@ -57,7 +61,7 @@ class AreaLoads(ModelCollectionComponent):
 
         return next_index
 
-    def get_area_load_ids_from_node_ids(self, nodes: list[int]) -> list[int]:
+    def get_area_load_ids_from_node_ids(self, nodes: List[int]) -> List[int]:
         """Get the IDs of all area loads that match the provided nodes array. Node order IS considered.
 
         Args:

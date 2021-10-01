@@ -1,8 +1,11 @@
-from typing import Literal
 from skyciv.classes.model.components.point_loads.point_load import PointLoad
 from skyciv.utils.helpers import next_object_key
 from skyciv.classes.model.components._base_class.model_collection_component import ModelCollectionComponent
-
+from typing import List
+try:
+    from typing import Literal
+except ImportError:
+    from typing_extensions import Literal
 
 class PointLoads(ModelCollectionComponent):
     """Creates an instance of the SkyCiv PointLoads class.
