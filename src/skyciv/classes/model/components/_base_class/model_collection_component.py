@@ -17,7 +17,7 @@ class ModelCollectionComponent:
         data = {}
 
         if id is not None:
-            if self.hasattr(id):
+            if hasattr(self, id):
                 setattr(data, id, clone(self[id]))
         else:
 
